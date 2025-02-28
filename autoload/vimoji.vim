@@ -1,15 +1,18 @@
-" Prevent loading this plugin multiple times
-if exists('g:loaded_vimoji')
-    finish
-endif
-let g:loaded_vimoji = 1
-
-function! vimoji#vimoji#init()
+function! vimoji#init()
+    " Only set up once
+    if exists('g:vimoji_initialized')
+        return
+    endif
+    let g:vimoji_initialized = 1
+    
     " Set up abbreviations
-    call vimoji#vimoji#setup()
+    call vimoji#setup()
 endfunction
 
-function! vimoji#vimoji#setup()
+function! vimoji#setup()
+    " Clear existing abbreviations first
+    silent! iabclear
+    
     " Emoji
     iab :smile: 😄
     iab :laughing: 🤣
@@ -50,7 +53,7 @@ function! vimoji#vimoji#setup()
     iab :hammer: 🔨
     iab :tools: 🛠️
     iab :folder: 📁
-    iab :file: ��
+    iab :file: 
     iab :inbox: 📥
     iab :outbox: 📤
     iab :package: 📦
@@ -63,7 +66,7 @@ function! vimoji#vimoji#setup()
     iab :calendar: 📅
     iab :bell: 🔔
     iab :penguin: 🐧
-    iab :elephant: ��
+    iab :elephant: 
     iab :whale: 🐋
     iab :octopus: 🐙
     iab :fox: 🦊
@@ -75,7 +78,7 @@ function! vimoji#vimoji#setup()
     iab :compass: 🧭
     iab :hotel: 🏨
     iab :home: 🏠
-    iab :office: ��
+    iab :office: 
     iab :mountain: ⛰️
     iab :beach: 🏖️
     iab :christmas: 🎄
@@ -89,13 +92,13 @@ function! vimoji#vimoji#setup()
     iab :apple: 🍎
     iab :sushi: 🍣
     iab :sandwich: 🥪
-    iab :salad: ��
+    iab :salad: 
     iab :cake: 🍰
     iab :fork: 🍴
     iab :clap: 👏
     iab :wave: 👋
     iab :pray: 🙏
-    iab :muscle: ��
+    iab :muscle: 
     iab :handshake: 🤝
     iab :raised_hands: 🙌
     iab :think: 🤔
@@ -112,4 +115,4 @@ function! vimoji#vimoji#setup()
     iab :brain: 🧠
     iab :speech: 💬
     iab :idea: 💭
-endfunction
+endfunction 
