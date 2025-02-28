@@ -1,102 +1,115 @@
-" Emoji
-ab :smile: 😄
-ab :laughing: 🤣
-ab :blush: 🥰
-ab :heart: 💖
-ab :thumbsup: 👍
-ab :ok: 👌
-ab :check: ✅
-ab :x: ❌
-ab :warning: ⚠️
-ab :bulb: 💡
-ab :wrench: 🔧
-ab :bug: 🐛
-ab :rocket: 🚀
-ab :sparkles: ✨
-ab :memo: 📝
-ab :books: 📚
-ab :gear: ⚙️
-ab :mag: 🔍
-ab :lock: 🔒
-ab :key: 🔑
-ab :clock: 🕐
-ab :fire: 🔥
-ab :zap: ⚡
-ab :tada: 🎉
-ab :eyes: 👀
-ab :link: 🔗
-ab :shield: 🛡️
-ab :test: 🧪
-ab :graph: 📊
-ab :chart: 📈
-ab :down: 📉
-ab :target: 🎯
-ab :stop: 🛑
-ab :info: ℹ️
-ab :question: ❓
-ab :exclamation: ❗
-ab :hammer: 🔨
-ab :tools: 🛠️
-ab :folder: 📁
-ab :file: 📄
-ab :inbox: 📥
-ab :outbox: 📤
-ab :package: 📦
-ab :database: 🗄️
-ab :server: 🖥️
-ab :cloud: ☁️
-ab :sync: 🔄
-ab :merge: 🔀
-ab :time: ⏱️
-ab :calendar: 📅
-ab :bell: 🔔
-ab :penguin: 🐧
-ab :elephant: 🐘
-ab :whale: 🐋
-ab :octopus: 🐙
-ab :fox: 🦊
-ab :owl: 🦉
-ab :unicorn: 🦄
-ab :dragon: 🐉
-ab :plane: ✈️
-ab :world: 🌎
-ab :compass: 🧭
-ab :hotel: 🏨
-ab :home: 🏠
-ab :office: 🏢
-ab :mountain: ⛰️
-ab :beach: 🏖️
-ab :christmas: 🎄
-ab :birthday: 🎂
-ab :gift: 🎁
-ab :halloween: 🎃
-ab :pizza: 🍕
-ab :coffee: ☕
-ab :tea: 🫖
-ab :cookie: 🍪
-ab :apple: 🍎
-ab :sushi: 🍣
-ab :sandwich: 🥪
-ab :salad: 🥗
-ab :cake: 🍰
-ab :fork: 🍴
-ab :clap: 👏
-ab :wave: 👋
-ab :pray: 🙏
-ab :muscle: 💪
-ab :handshake: 🤝
-ab :raised_hands: 🙌
-ab :think: 🤔
-ab :sweat: 😅
-ab :facepalm: 🤦
-ab :shrug: 🤷
-ab :ninja: 🥷
-ab :nerd: 🤓
-ab :monocle: 🧐
-ab :zip: 🤐
-ab :dizzy: 😵
-ab :star_eyes: 🤩
-ab :hundred: 💯
-ab :brain: 🧠
-ab :speech: 💬
-ab :idea: 💭
+" Prevent loading this plugin multiple times
+if exists('g:loaded_vimoji')
+    finish
+endif
+let g:loaded_vimoji = 1
+
+function! vimoji#vimoji#init()
+    " Set up abbreviations
+    call vimoji#vimoji#setup()
+endfunction
+
+function! vimoji#vimoji#setup()
+    " Emoji
+    iab :smile: 😄
+    iab :laughing: 🤣
+    iab :blush: 🥰
+    iab :heart: 💖
+    iab :thumbsup: 👍
+    iab :ok: 👌
+    iab :check: ✅
+    iab :x: ❌
+    iab :warning: ⚠️
+    iab :bulb: 💡
+    iab :wrench: 🔧
+    iab :bug: 🐛
+    iab :rocket: 🚀
+    iab :sparkles: ✨
+    iab :memo: 📝
+    iab :books: 📚
+    iab :gear: ⚙️
+    iab :mag: 🔍
+    iab :lock: 🔒
+    iab :key: 🔑
+    iab :clock: 🕐
+    iab :fire: 🔥
+    iab :zap: ⚡
+    iab :tada: 🎉
+    iab :eyes: 👀
+    iab :link: 🔗
+    iab :shield: 🛡️
+    iab :test: 🧪
+    iab :graph: 📊
+    iab :chart: 📈
+    iab :down: 📉
+    iab :target: 🎯
+    iab :stop: 🛑
+    iab :info: ℹ️
+    iab :question: ❓
+    iab :exclamation: ❗
+    iab :hammer: 🔨
+    iab :tools: 🛠️
+    iab :folder: 📁
+    iab :file: ��
+    iab :inbox: 📥
+    iab :outbox: 📤
+    iab :package: 📦
+    iab :database: 🗄️
+    iab :server: 🖥️
+    iab :cloud: ☁️
+    iab :sync: 🔄
+    iab :merge: 🔀
+    iab :time: ⏱️
+    iab :calendar: 📅
+    iab :bell: 🔔
+    iab :penguin: 🐧
+    iab :elephant: ��
+    iab :whale: 🐋
+    iab :octopus: 🐙
+    iab :fox: 🦊
+    iab :owl: 🦉
+    iab :unicorn: 🦄
+    iab :dragon: 🐉
+    iab :plane: ✈️
+    iab :world: 🌎
+    iab :compass: 🧭
+    iab :hotel: 🏨
+    iab :home: 🏠
+    iab :office: ��
+    iab :mountain: ⛰️
+    iab :beach: 🏖️
+    iab :christmas: 🎄
+    iab :birthday: 🎂
+    iab :gift: 🎁
+    iab :halloween: 🎃
+    iab :pizza: 🍕
+    iab :coffee: ☕
+    iab :tea: 🫖
+    iab :cookie: 🍪
+    iab :apple: 🍎
+    iab :sushi: 🍣
+    iab :sandwich: 🥪
+    iab :salad: ��
+    iab :cake: 🍰
+    iab :fork: 🍴
+    iab :clap: 👏
+    iab :wave: 👋
+    iab :pray: 🙏
+    iab :muscle: ��
+    iab :handshake: 🤝
+    iab :raised_hands: 🙌
+    iab :think: 🤔
+    iab :sweat: 😅
+    iab :facepalm: 🤦
+    iab :shrug: 🤷
+    iab :ninja: 🥷
+    iab :nerd: 🤓
+    iab :monocle: 🧐
+    iab :zip: 🤐
+    iab :dizzy: 😵
+    iab :star_eyes: 🤩
+    iab :hundred: 💯
+    iab :brain: 🧠
+    iab :speech: 💬
+    iab :idea: 💭
+endfunction
