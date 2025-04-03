@@ -12,6 +12,7 @@ endfunction
 function! vimoji#setup()
     " Emoji
     iab :smile: 😄
+    iab :wink: 😉
     iab :laughing: 🤣
     iab :blush: 🥰
     iab :heart: 💖
